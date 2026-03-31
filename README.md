@@ -1,7 +1,5 @@
 # 💪 NIKSOFT BMI Calculator & Health Monitoring App
 
-![BMI App Screenshot](./screenshot.png)  
-
 **NIKSOFT BMI Calculator** is a responsive web application built with **React + TypeScript** that allows users to calculate their Body Mass Index (BMI), track BMI history, and visualize it with interactive charts and gauges. The app supports **dark/light mode**, **range sliders**, and **exportable BMI reports** as PNG images.
 
 ---
@@ -39,7 +37,7 @@ git clone https://github.com/NipunKavinda95/bmi-calculator.git
 cd bmi-calculator
 ```
 ### 2. Install Dependencies
-
+```bas
 npm install
 ```
 or
@@ -66,32 +64,37 @@ yarn build
 ```
 The production-ready files will be in the dist/ folder.
 
-src/
-├─ components/
-│  ├─ BMICalculator.tsx      # Main calculator component
-│  ├─ BMIGauge.tsx           # Gauge component
-│  ├─ BMIRange.tsx           # Range bar component
-│  └─ BMIChart.tsx           # History chart component
-├─ App.tsx
-├─ main.tsx
-├─ index.css
-└─ assets/
-    └─ vite.svg
-public/
-├─ icons.svg
-├─ index.html
-package.json
-tsconfig.json
+## 🔧 Project Structure
 
-✅ Future Improvements
-Add user authentication to save BMI history across devices.
-Add weight and height units toggle (kg/lb, cm/inches).
-Add predictive analytics or goal tracking for BMI over time.
-Host the app via GitHub Pages or Vercel for public access.
-Add PDF export option in addition to PNG.
-👨‍💻 Author
+- src/
+  - components/
+    - BMICalculator.tsx
+    - BMIGauge.tsx
+    - BMIRange.tsx
+    - BMIChart.tsx
+  - App.tsx
+  - main.tsx
+  - index.css
+  - assets/
+    - vite.svg
+- public/
+  - icons.svg
+  - index.html
+- package.json
+- tsconfig.json
 
-Nipun Kavinda – Mechanical Engineer /Python and Automation Developer
+## ✅ Future Improvements
 
-GitHub: https://github.com/NipunKavinda95
-LinkedIn: https://www.linkedin.com/in/nipun-kavinda/
+- Add user authentication to save BMI history across devices.
+- Add weight and height units’ toggle (kg/lb, cm/inches).
+- Add predictive analytics or goal tracking for BMI over time.
+- Host the app via GitHub Pages or Vercel for public access.
+- Add PDF export option in addition to PNG.
+
+## 👨‍💻 Author
+
+### Nipun Kavinda – Mechanical Engineer /Python and Automation Developer
+
+- GitHub: https://github.com/NipunKavinda95
+- LinkedIn: https://www.linkedin.com/in/nipun-kavinda/
+
