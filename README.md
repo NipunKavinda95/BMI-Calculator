@@ -1,73 +1,97 @@
-# React + TypeScript + Vite
+# 💪 NIKSOFT BMI Calculator & Health Monitoring App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![BMI App Screenshot](./screenshot.png)  
 
-Currently, two official plugins are available:
+**NIKSOFT BMI Calculator** is a responsive web application built with **React + TypeScript** that allows users to calculate their Body Mass Index (BMI), track BMI history, and visualize it with interactive charts and gauges. The app supports **dark/light mode**, **range sliders**, and **exportable BMI reports** as PNG images.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🔹 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Dynamic BMI Calculation**: Enter weight and height using sliders and instantly calculate BMI.
+- **BMI Classification**: Shows your BMI category (Underweight, Normal, Overweight, Obese) with health tips.
+- **Interactive Visualization**:
+  - Gauge showing BMI level.
+  - Range bar with colored segments for each BMI category.
+  - Chart showing BMI history over time.
+- **History Tracking**: Stores past BMI calculations in localStorage.
+- **Export Report**: Download the BMI result, gauge, range bar, and history chart as a PNG image.
+- **Dark/Light Mode**: Toggle between themes.
+- **Responsive Design**: Works perfectly on desktop and mobile.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠 Technology Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Frontend**: React + TypeScript  
+- **Charts & Visualization**: Custom components + lazy loading (`React.lazy`, `Suspense`)  
+- **Export**: `html-to-image` library for generating PNG reports  
+- **State Management**: React Hooks (`useState`, `useEffect`)  
+- **Styling**: CSS, responsive design, sticky header for sliders & buttons
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/NipunKavinda95/bmi-calculator.git
+cd bmi-calculator
 ```
+### 2. Install Dependencies
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+npm install
 ```
+or
+```bash
+yarn install
+```
+### 3. Run Locally
+```bash
+npm run dev
+```
+or
+```bash
+yarn dev
+```
+Open http://localhost:5173 to view the app in your browser.
+
+### 4. Build for Production
+```bash
+npm run build
+```
+or
+```bash
+yarn build
+```
+The production-ready files will be in the dist/ folder.
+
+src/
+├─ components/
+│  ├─ BMICalculator.tsx      # Main calculator component
+│  ├─ BMIGauge.tsx           # Gauge component
+│  ├─ BMIRange.tsx           # Range bar component
+│  └─ BMIChart.tsx           # History chart component
+├─ App.tsx
+├─ main.tsx
+├─ index.css
+└─ assets/
+    └─ vite.svg
+public/
+├─ icons.svg
+├─ index.html
+package.json
+tsconfig.json
+
+✅ Future Improvements
+Add user authentication to save BMI history across devices.
+Add weight and height units toggle (kg/lb, cm/inches).
+Add predictive analytics or goal tracking for BMI over time.
+Host the app via GitHub Pages or Vercel for public access.
+Add PDF export option in addition to PNG.
+👨‍💻 Author
+
+Nipun Kavinda – Mechanical Engineer /Python and Automation Developer
+
+GitHub: https://github.com/NipunKavinda95
+LinkedIn: https://www.linkedin.com/in/nipun-kavinda/
